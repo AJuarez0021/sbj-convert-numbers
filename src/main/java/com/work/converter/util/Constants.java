@@ -75,7 +75,7 @@ public final class Constants {
     /**
      * Url Swagger.
      */
-    public static final String SWAGGER_URL = "http://localhost:9090";
+    public static final String SWAGGER_URL = "https://github.com/AJuarez0021";
 
     /**
      * The Constant HEADER_TRANSACTION_ID_KEY.

@@ -55,13 +55,13 @@ public class NumberToWordsController {
     @PostMapping(path = "/convert", produces = {MediaType.APPLICATION_JSON_VALUE})
     @Operation(summary = "convertNumberToWords", description = "Convert number to words")
     @ApiResponses(value = {
-        @ApiResponse(responseCode = "200", description = "Operación exitosa",
+        @ApiResponse(responseCode = "200", description = "Successful operation",
                 content = @Content(schema = @Schema(implementation = NumberResponseDTO.class)
                 )),
-        @ApiResponse(responseCode = "400", description = "Datos invalidos",
+        @ApiResponse(responseCode = "400", description = "Invalid data",
                 content = @Content(schema = @Schema(implementation = ErrorResponseDTO.class)
                 )),
-        @ApiResponse(responseCode = "500", description = "Error general",
+        @ApiResponse(responseCode = "500", description = "General error",
                 content = @Content(schema = @Schema(implementation = ErrorResponseDTO.class)
                 ))
     })
@@ -78,7 +78,7 @@ public class NumberToWordsController {
             return ResponseEntity.ok(response);
         } catch (Exception ex) {
             throw new ServiceException(HttpStatus.INTERNAL_SERVER_ERROR,
-                    "Ocurrio un error al convertir el numero: " + request.number());
+                    "An error occurred while converting the number: " + request.number());
         }
     }
 }
