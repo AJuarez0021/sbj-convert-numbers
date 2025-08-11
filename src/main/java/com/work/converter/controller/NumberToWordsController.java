@@ -67,14 +67,12 @@ public class NumberToWordsController {
     })
     public ResponseEntity<NumberResponseDTO> convertNumberToWords(@Valid @RequestBody NumberRequestDTO request) {
         try {
-            log.debug("Request: {}", request);
             String words = numberToWordsService.convertNumberToWords(request.number());
             NumberResponseDTO response = new NumberResponseDTO(
                     request.number(),
                     words,
                     DateUtil.getFormat(LocalDateTime.now())
             );
-            log.debug("Response: {}", response);
             return ResponseEntity.ok(response);
         } catch (Exception ex) {
             throw new ServiceException(HttpStatus.INTERNAL_SERVER_ERROR,
