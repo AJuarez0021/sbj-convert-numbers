@@ -5,7 +5,7 @@ Application to convert numbers to words
 http://localhost:9090/api/swagger-ui/index.html#/
 
 # docker-build
-docker network create -d bridge services-net
+docker network create -d bridge services-net<br/>
 docker build --no-cache -f Dockerfile -t sbj-convert-numbers:1.0.0 .
 
 # docker-run
