@@ -60,12 +60,12 @@ public final class Constants {
     /**
      * Email Swagger.
      */
-    public static final String SWAGGER_EMAIL = "mail@mail.com";
+    public static final String SWAGGER_EMAIL = "programacion0025@gmail.com";
 
     /**
      * Descripcion Swagger.
      */
-    public static final String SWAGGER_DESCRIPTION = "Example Swagger";
+    public static final String SWAGGER_DESCRIPTION = "Application to convert numbers to words";
 
     /**
      * Nombre Swagger.
